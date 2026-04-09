@@ -24,6 +24,16 @@
     // };
 };
 
+&zip_temp_layer {
+    excluded-positions =
+        18  // MB1（左クリック）
+        19  // MB3（中クリック）
+        20  // MB2（右クリック）
+        30  // MB4（戻るボタン）
+        32  // MB5（進むボタン）
+    >;
+};
+
 // Input ProcessorによるAML設定（マウスレイヤー = 4、タイムアウト10秒）
 &trackball_listener {
     input-processors = <&zip_temp_layer 4 10000>;
