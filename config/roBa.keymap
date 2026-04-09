@@ -9,7 +9,6 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
     scroll-layers = <5>;
 
     // arrows {
@@ -23,6 +22,16 @@
     //     wait-ms = <5>;
     //     tap-ms = <5>;
     // };
+};
+
+// Input ProcessorによるAML設定（マウスレイヤー = 4、タイムアウト10秒）
+&trackball_listener {
+    input-processors = <&zip_temp_layer 4 10000>;
+};
+
+// クリックしてもAMLが継続するようにする
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 4 10000>;
 };
 
 / {
