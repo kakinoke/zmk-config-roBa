@@ -26,12 +26,12 @@
 };
 
 &zip_temp_layer {
-    excluded-positions =
-        18  // MB1（左クリック）
-        19  // MB3（中クリック）
-        20  // MB2（右クリック）
-        30  // MB4（戻るボタン）
-        32  // MB5（進むボタン）
+    excluded-positions = <
+        18
+        19
+        20
+        30
+        32
     >;
 };
 
