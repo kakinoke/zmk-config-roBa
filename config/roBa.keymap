@@ -114,10 +114,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION       &kp AT_SIGN  &kp HASH  &kp DOLLAR        &kp PERCENT                                        &kp CARET      &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE             &kp TILDE    &trans    &trans            &trans       &trans                 &kp SEMICOLON  &kp SEMICOLON  &kp COLON          &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&mt LEFT_SHIFT TILDE  &trans       &trans    &trans            &trans       &trans                 &kp SQT        &kp SQT        &kp DOUBLE_QUOTES  &kp PIPE       &kp LEFT_BRACE        &kp RIGHT_BRACE
-&trans                &trans       &trans    &kp LEFT_BRACKET  &trans       &kp RIGHT_BRACKET      &trans         &trans                                                                 &trans
+&kp EXCLAMATION       &kp AT_SIGN  &kp HASH  &kp DOLLAR            &kp PERCENT                                            &kp CARET      &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp GRAVE             &kp TILDE    &trans    &trans                &trans       &trans                     &kp SEMICOLON  &kp SEMICOLON  &kp COLON          &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&mt LEFT_SHIFT TILDE  &trans       &trans    &trans                &trans       &trans                     &kp SQT        &kp SQT        &kp DOUBLE_QUOTES  &kp PIPE       &kp LEFT_BRACE        &kp RIGHT_BRACE
+&trans                &trans       &trans    &kp LG(LEFT_BRACKET)  &trans       &kp LG(RIGHT_BRACKET)      &trans         &trans                                                                 &trans
             >;
         };
 
