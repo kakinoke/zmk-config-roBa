@@ -87,6 +87,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        android: android {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &to 8>;
+            label = "ANDROID";
+        };
+
+        macOS: macOS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "MACOS";
+        };
     };
 
     behaviors {
@@ -174,8 +188,8 @@
 
         layer_6 {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans        &trans        &trans        &trans                           &macOS        &bt BT_SEL 1  &bt BT_SEL 2  &android      &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &bt BT_SEL 0  &trans        &trans        &bt BT_SEL 3  &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
@@ -188,6 +202,28 @@
 &trans                &trans                &trans                &kp LA(LG(V))         &trans                &trans      &trans  &kp LG(N7)        &trans            &trans            &trans            &trans
 &trans                &trans                &trans                &trans                &trans                &trans      &trans  &trans                                                                  &trans
             >;
+        };
+
+        Android {
+            bindings = <
+&kp Q             &kp W        &kp E         &kp R         &kp T                                                            &kp Y        &kp U  &lt 5 I    &kp O       &kp P
+&kp A             &kp S        &kp D         &kp F         &kp G                   &kp ESC          &kp MINUS               &kp H        &kp J  &kp K      &kp L       &kp BACKSPACE
+&mt LEFT_SHIFT Z  &kp X        &kp C         &kp V         &kp B                   &lt 9 TAB        &lt 9 EQUAL             &kp N        &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT FSLH
+&kp LCTRL         &lt 6 LCTRL  &kp LEFT_ALT  &lt 7 ESCAPE  &mt LEFT_COMMAND LANG2  &lt 1 SPACE      &mt LEFT_COMMAND LANG1  &lt 2 ENTER                                &kp BACKSLASH
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
+        };
+
+        ARROWAndroid {
+            bindings = <
+&kp ESCAPE      &kp LC(LS(TAB))         &kp K_MUTE        &kp LC(TAB)              &trans                       &trans     &trans              &kp UP_ARROW    &trans               &trans
+&kp HOME        &kp C_PREVIOUS          &kp C_PLAY_PAUSE  &kp C_NEXT               &kp END  &trans      &trans  &kp LC(A)  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp LC(E)
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans            &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans     &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans
+&trans          &trans                  &trans            &trans                   &trans   &trans      &trans  &trans                                                              &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(C_VOL_UP) LC(C_VOLUME_DOWN)>;
         };
     };
 };
